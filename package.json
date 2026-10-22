@@ -1,0 +1,8 @@
+{
+  "name": "student-rest-api-lab",
+  "version": "1.0.0",
+  "description": "Student list and registration web application using REST GET and POST methods",
+  "main": "server.js",
+  "scripts": {"start": "node server.js"},
+  "engines": {"node": ">=18"}
+}

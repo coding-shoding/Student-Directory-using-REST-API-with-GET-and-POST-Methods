@@ -1,0 +1,6 @@
+[
+  {"id":1,"name":"Aarav Sharma","email":"aarav.sharma@example.com","course":"Computer Science","year":2},
+  {"id":2,"name":"Diya Patel","email":"diya.patel@example.com","course":"Information Technology","year":3},
+  {"id":3,"name":"Kabir Iyer","email":"kabir.iyer@example.com","course":"Artificial Intelligence","year":1},
+  {"id":4,"name":"Meera Nair","email":"meera.nair@example.com","course":"Data Science","year":4}
+]

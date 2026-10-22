@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Hub | REST API Lab</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">S</div>
+    <div><div class="brand-title">Student Hub</div><div class="brand-subtitle">REST API · GET & POST demonstration</div></div>
+    <span class="api-pill"><span class="live-dot"></span> API DEMO</span>
+  </header>
+  <main class="page-wrap">
+    <section class="intro">
+      <div class="eyebrow">WEB TECHNOLOGY LAB</div>
+      <h1>Student records, <span>made simple.</span></h1>
+      <p>Retrieve student details through a GET request or register a student with a JSON POST request.</p>
+      <div class="stats-row">
+        <div class="stat-card"><div class="stat-icon purple">↻</div><div><div class="stat-label">READ STUDENTS</div><div class="stat-value">GET <span>/api/students</span></div></div></div>
+        <div class="stat-card"><div class="stat-icon green">＋</div><div><div class="stat-label">ADD A STUDENT</div><div class="stat-value">POST <span>/api/students</span></div></div></div>
+      </div>
+    </section>
+    <section class="content-grid">
+      <article class="panel list-panel">
+        <div class="panel-heading"><div><div class="section-kicker">Q1 · RETRIEVE</div><h2>Student directory</h2><p>Student details fetched from the REST API.</p></div><button id="refreshBtn" class="secondary-btn">↻ Refresh list</button></div>
+        <div id="getMessage" class="notice" role="status" hidden></div>
+        <div class="table-wrap"><table><thead><tr><th>ID</th><th>STUDENT</th><th>COURSE</th><th>YEAR</th></tr></thead><tbody id="studentRows"><tr><td colspan="4" class="empty">Loading student records…</td></tr></tbody></table></div>
+        <div class="table-footer"><span><span class="live-dot"></span> Live API data</span><span id="studentCount">Loading…</span></div>
+      </article>
+      <article class="panel form-panel">
+        <div class="section-kicker">Q2 · REGISTER</div><h2>Register a student</h2><p class="panel-description">Enter the details below. The form sends JSON to the server.</p>
+        <form id="studentForm">
+          <label for="name">Full name</label><input id="name" name="name" placeholder="e.g. Ananya Rao" required maxlength="80" />
+          <label for="email">Email address</label><input id="email" name="email" type="email" placeholder="student@example.com" required />
+          <label for="course">Course / programme</label><select id="course" name="course" required><option value="">Choose a course</option><option>Computer Science</option><option>Information Technology</option><option>Artificial Intelligence</option><option>Data Science</option><option>Electronics</option><option>Mechanical Engineering</option></select>
+          <label for="year">Year of study</label><select id="year" name="year" required><option value="">Choose year</option><option value="1">Year 1</option><option value="2">Year 2</option><option value="3">Year 3</option><option value="4">Year 4</option><option value="5">Year 5</option><option value="6">Year 6</option></select>
+          <button type="submit" id="submitBtn" class="primary-btn">Register student <span>→</span></button>
+        </form>
+        <div id="postMessage" class="notice" role="status" hidden></div>
+        <div class="response-hint"><span class="code-icon">{ }</span><div><strong>JSON request body</strong><code>name · email · course · year</code></div></div>
+      </article>
+    </section>
+    <footer><span>Student Hub · REST API lab exercise</span><span>HTTP status codes handled: 200 · 201 · 400 · 404 · 409 · 500</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
